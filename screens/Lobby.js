@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-//import logo from '../assets/lays.png';
+import { Image, StyleSheet, Text, View, Button } from 'react-native';
+import logo from '../assets/logo.png';
 
 
 class App extends Component{
   render(){
+      
     return (
+      
       <View style={styles.container}>
-        <Text style={styles.header}>Welcome to my Application</Text>
+        <Text style={styles.header}>Welcome Lobby</Text>
+        <Image source={logo} style={styles.logo} />
+
       </View>
     )
   }
@@ -16,7 +20,7 @@ class App extends Component{
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: '#bfe6ff',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -26,8 +30,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   logo: {
-    width: 250,
-    height: 250,
+    width: 50,
+    height: 50,
   }
 
 });
