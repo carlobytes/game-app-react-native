@@ -5,13 +5,23 @@ import Lobby from '../screens/Lobby';
 
 const screens = {
   HomePage: {
-    screen: HomePage
+    screen: HomePage,
+    navigationOptions: {
+      title: 'Home',
+    }
   },
   Lobby: {
-    screen: Lobby
+    screen: Lobby,
+    navigationOptions: {
+      title: 'Lobby Poe '
+    }
   }
 }
 
-const HomeStack = createStackNavigator(screens);
+const HomeStack = createStackNavigator(screens, 
+  {defaultNavigationOptions:{
+    headerStyle: { backgroundColor: '#eee' }
+  }}
+);
 
 export default createAppContainer(HomeStack);
