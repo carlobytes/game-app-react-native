@@ -13,7 +13,7 @@ const screens = {
   Lobby: {
     screen: Lobby,
     navigationOptions: {
-      title: 'Lobby Poe '
+      title: 'Lobby '
     }
   }
 }

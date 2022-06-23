@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, Text, View, Button } from 'react-native';
-import logo from '../assets/logo.png';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 class App extends Component{
@@ -9,8 +8,7 @@ class App extends Component{
     return (
       
       <View style={styles.container}>
-        <Text style={styles.header}>Welcome Lobby</Text>
-        <Image source={logo} style={styles.logo} />
+        <Text style={styles.header}>Hello!</Text>
 
       </View>
     )

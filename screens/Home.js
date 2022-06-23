@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, Text, View, Button } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import logo from '../assets/logo.png';
 
 
@@ -13,9 +14,11 @@ class App extends Component{
     
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>Welcome Home</Text>
+        <Text style={styles.header}>Welcome!</Text>
         <Image source={logo} style={styles.logo} />
-        <Button title='Go to Lobby' onPress={pressHandler}/>
+        <Pressable style={styles.button} onPress={pressHandler}>
+          <Text style={styles.text}>Enter Lobby</Text>
+        </Pressable>
       </View>
     )
   }
@@ -34,9 +37,26 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 30,
   },
+  button: {
+    marginTop: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
+  },
   logo: {
-    width: 50,
-    height: 50,
+    width: 250,
+    height: 220,
   }
 
 });
